@@ -14,6 +14,9 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Static directory
 app.use(express.static("./public"));
 
+// Override with POST having ?_method=DELETE
+app.use(methodOverride("_method"));
+
 // Set Handlebars.
 var exphbs = require("express-handlebars");
 
@@ -23,7 +26,7 @@ app.set("view engine", "handlebars");
 
 // Routes =============================================================
 
-var routes = require("./controllers/burger-controller.js");
+var routes = require("./controllers/burger_controller.js");
 app.use('/', routes);
 
-app.listen(PORT);
+app.listen(port);
