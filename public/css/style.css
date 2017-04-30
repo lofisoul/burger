@@ -62,7 +62,11 @@ h2 {
   display:block;
 }
 
+.add-one input[type="text"] {
+  display:block;
+  width:100%;
+}
+
 .add-one input[type="radio"] {
-  margin-left:15px;
-  margin-right:5px;
+  margin:0 5px;
 }
